@@ -1,0 +1,33 @@
+Feature: Subtract
+
+Scenario: Subtract two numbers positive result
+    Given I enter "10" into the calculator
+    And I hit "subtract"
+    And I enter "5" into the calculator
+    When I hit "equals"
+    Then I see a result of "5"
+
+Scenario: Subtract three numbers positive result
+    Given I enter "10" into the calculator
+    And I hit "Subtract"
+    And I enter "5" into the calculator
+    And I hit "Subtract"
+    And I enter "2" into the calculator
+    When I hit "equals"
+    Then I see a result of "3"
+
+Scenario: Subtract two numbers negative result
+    Given I enter "5" into the calculator
+    And I hit "Subtract"
+    And I enter "6" into the calculator
+    When I hit "equals"
+    Then I see a result of "-1"
+	
+Scenario: Subtract three numbers negative result
+    Given I enter "5" into the calculator
+    And I hit "Subtract"
+    And I enter "5" into the calculator
+    And I hit "Subtract"
+    And I enter "2" into the calculator
+    When I hit "equals"
+    Then I see a result of "-2"
